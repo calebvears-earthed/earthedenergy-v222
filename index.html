@@ -62,25 +62,217 @@ a:hover{color:#e2d3ff}
 </div>
 
 <!-- ================= PRODUCT SECTIONS ================= -->
-<sc-for list="{{ products }}" as="p" hint-placeholder-count="4">
-  <div id="{{ p.id }}" style="background:{{ p.bg }};padding:96px 40px;scroll-margin-top:0px">
-    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center;direction:{{ p.dir }}">
-      <div style="direction:ltr">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
-          <span style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#c96a12">{{ p.eyebrow }}</span>
-          <span style="height:1px;width:48px;background:rgba(201,106,18,.45)"></span>
-        </div>
-        <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:38px;font-weight:700;line-height:1.15;margin:0 0 16px;color:#2b1550;text-wrap:pretty">{{ p.title }}</h2>
-        <p style="font-size:17px;line-height:1.65;color:#554a68;margin:0 0 28px;max-width:52ch">{{ p.body }}</p>
-        <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px">
-          <sc-for list="{{ p.points }}" as="pt" hint-placeholder-count="3">
-            <div style="display:flex;gap:12px;align-items:flex-start">
-              <span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px">
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-              </span>
-              <span style="font-size:15.5px;line-height:1.5;color:#443a55">{{ pt }}</span>
-            </div>
-          </sc-for>
+<div id="solar" style="background:#faf7f2;padding:96px 40px;scroll-margin-top:0px">
+  <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center;direction:ltr">
+    <div style="direction:ltr">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+        <span style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#c96a12">SOLAR</span>
+        <span style="height:1px;width:48px;background:rgba(201,106,18,.45)"></span>
+      </div>
+      <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:38px;font-weight:700;line-height:1.15;margin:0 0 16px;color:#2b1550;text-wrap:pretty">Sunshine, on tap.</h2>
+      <p style="font-size:17px;line-height:1.65;color:#554a68;margin:0 0 28px;max-width:52ch">A right-sized rooftop system built for your home's actual usage — panels sized around your bills, not upsold to fill your roof.</p>
+      <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px">
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size:15.5px;line-height:1.5;color:#443a55">Trina Vertex S+ 475W panels (25-year performance warranty)</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size:15.5px;line-height:1.5;color:#443a55">GoodWe inverter — reliable single or three-phase</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size:15.5px;line-height:1.5;color:#443a55">Full SAPN and STC lodgement — you don't touch a form</span></div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:center">
+        <a href="#quote" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#1a0b2e;background:#f5a04a;padding:14px 26px;border-radius:999px;display:inline-block">Get a quote</a>
+        <a href="#top" style="font-size:14px;color:#7c3aed;padding:14px 6px">Back to top ↑</a>
+      </div>
+    </div>
+    <div style="direction:ltr;position:relative">
+      <div style="position:absolute;inset:-24px;background:radial-gradient(closest-side,rgba(139,92,246,.1),transparent);pointer-events:none"></div>
+      <img src="img/section-solar.png" alt="Sunshine, on tap." style="width:100%;height:420px;object-fit:cover;border-radius:18px;display:block;background:#1a0b2e" loading="lazy">
+    </div>
+  </div>
+</div>
+
+<div id="battery" style="background:#f4eefb;padding:96px 40px;scroll-margin-top:0px">
+  <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center;direction:rtl">
+    <div style="direction:ltr">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+        <span style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#c96a12">BATTERY STORAGE</span>
+        <span style="height:1px;width:48px;background:rgba(201,106,18,.45)"></span>
+      </div>
+      <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:38px;font-weight:700;line-height:1.15;margin:0 0 16px;color:#2b1550;text-wrap:pretty">Store your sunshine. Use it after dark.</h2>
+      <p style="font-size:17px;line-height:1.65;color:#554a68;margin:0 0 28px;max-width:52ch">A home battery captures the solar you don't use during the day, so you're running on your own power through the evening peak, and covered when the grid goes down.</p>
+      <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px">
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size:15.5px;line-height:1.5;color:#443a55">Blackout protection with automatic backup switchover</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size:15.5px;line-height:1.5;color:#443a55">GoodWe Lynx home battery — modular from 10 kWh</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size:15.5px;line-height:1.5;color:#443a55">Eligible for the federal home battery rebate</span></div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:center">
+        <a href="#quote" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#1a0b2e;background:#f5a04a;padding:14px 26px;border-radius:999px;display:inline-block">Get a quote</a>
+        <a href="#top" style="font-size:14px;color:#7c3aed;padding:14px 6px">Back to top ↑</a>
+      </div>
+    </div>
+    <div style="direction:ltr;position:relative">
+      <div style="position:absolute;inset:-24px;background:radial-gradient(closest-side,rgba(139,92,246,.1),transparent);pointer-events:none"></div>
+      <img src="img/section-battery.png" alt="Store your sunshine. Use it after dark." style="width:100%;height:420px;object-fit:cover;border-radius:18px;display:block;background:#1a0b2e" loading="lazy">
+    </div>
+  </div>
+</div>
+
+<div id="solar-battery" style="background:#faf7f2;padding:96px 40px;scroll-margin-top:0px">
+  <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center;direction:ltr">
+    <div style="direction:ltr">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+        <span style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#c96a12">FULL PACKAGE</span>
+        <span style="height:1px;width:48px;background:rgba(201,106,18,.45)"></span>
+      </div>
+      <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:38px;font-weight:700;line-height:1.15;margin:0 0 16px;color:#2b1550;text-wrap:pretty">Solar and battery, delivered together.</h2>
+      <p style="font-size:17px;line-height:1.65;color:#554a68;margin:0 0 28px;max-width:52ch">One quote, one crew, one commissioning. When solar and battery are designed as one system, the maths, the warranties, and the inverter setup all work harder.</p>
+      <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px">
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size:15.5px;line-height:1.5;color:#443a55">Single-inverter or hybrid design — matched to your home</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size:15.5px;line-height:1.5;color:#443a55">Combined STC and federal battery rebates stacked</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size:15.5px;line-height:1.5;color:#443a55">10-year workmanship warranty across the full package</span></div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:center">
+        <a href="#quote" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#1a0b2e;background:#f5a04a;padding:14px 26px;border-radius:999px;display:inline-block">Get a quote</a>
+        <a href="#top" style="font-size:14px;color:#7c3aed;padding:14px 6px">Back to top ↑</a>
+      </div>
+    </div>
+    <div style="direction:ltr;position:relative">
+      <div style="position:absolute;inset:-24px;background:radial-gradient(closest-side,rgba(139,92,246,.1),transparent);pointer-events:none"></div>
+      <img src="img/section-solarbattery.png" alt="Solar and battery, delivered together." style="width:100%;height:420px;object-fit:cover;border-radius:18px;display:block;background:#1a0b2e" loading="lazy">
+    </div>
+  </div>
+</div>
+
+<div id="ev" style="background:#f4eefb;padding:96px 40px;scroll-margin-top:0px">
+  <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center;direction:rtl">
+    <div style="direction:ltr">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+        <span style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#c96a12">EV CHARGING</span>
+        <span style="height:1px;width:48px;background:rgba(201,106,18,.45)"></span>
+      </div>
+      <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:38px;font-weight:700;line-height:1.15;margin:0 0 16px;color:#2b1550;text-wrap:pretty">Charge at home for a fraction of the pump.</h2>
+      <p style="font-size:17px;line-height:1.65;color:#554a68;margin:0 0 28px;max-width:52ch">A dedicated 7 kW home charger fills your EV overnight or straight from your solar during the day, smart-scheduled so it charges when power is cheapest or greenest.</p>
+      <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px">
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size:15.5px;line-height:1.5;color:#443a55">Up to 10× faster than a standard power point</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size:15.5px;line-height:1.5;color:#443a55">Solar-aware charging: soak up excess generation automatically</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size:15.5px;line-height:1.5;color:#443a55">Installed and certified by licensed electricians</span></div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:center">
+        <a href="#quote" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#1a0b2e;background:#f5a04a;padding:14px 26px;border-radius:999px;display:inline-block">Get a quote</a>
+        <a href="#top" style="font-size:14px;color:#7c3aed;padding:14px 6px">Back to top ↑</a>
+      </div>
+    </div>
+    <div style="direction:ltr;position:relative">
+      <div style="position:absolute;inset:-24px;background:radial-gradient(closest-side,rgba(139,92,246,.1),transparent);pointer-events:none"></div>
+      <img src="img/section-ev.png" alt="Charge at home for a fraction of the pump." style="width:100%;height:420px;object-fit:cover;border-radius:18px;display:block;background:#1a0b2e" loading="lazy">
+    </div>
+  </div>
+</div>
+
+<div id="aircon" style="background:#faf7f2;padding:96px 40px;scroll-margin-top:0px">
+  <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center;direction:ltr">
+    <div style="direction:ltr">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+        <span style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#c96a12">SPLIT SYSTEMS</span>
+        <span style="height:1px;width:48px;background:rgba(201,106,18,.45)"></span>
+      </div>
+      <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:38px;font-weight:700;line-height:1.15;margin:0 0 16px;color:#2b1550;text-wrap:pretty">Cool the rooms you use. Skip the ones you don't.</h2>
+      <p style="font-size:17px;line-height:1.65;color:#554a68;margin:0 0 28px;max-width:52ch">A right-sized split system runs off your solar during the day and keeps the rooms you actually occupy at the temperature you actually want.</p>
+      <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px">
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size:15.5px;line-height:1.5;color:#443a55">Daikin, Mitsubishi Electric, Fujitsu — premium brands only</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size:15.5px;line-height:1.5;color:#443a55">Inverter-driven models sized to the space, not oversold</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size:15.5px;line-height:1.5;color:#443a55">5-year warranty on unit and install</span></div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:center">
+        <a href="#quote" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#1a0b2e;background:#f5a04a;padding:14px 26px;border-radius:999px;display:inline-block">Get a quote</a>
+        <a href="#top" style="font-size:14px;color:#7c3aed;padding:14px 6px">Back to top ↑</a>
+      </div>
+    </div>
+    <div style="direction:ltr;position:relative">
+      <div style="position:absolute;inset:-24px;background:radial-gradient(closest-side,rgba(139,92,246,.1),transparent);pointer-events:none"></div>
+      <img src="img/section-aircon.png" alt="Cool the rooms you use. Skip the ones you don't." style="width:100%;height:420px;object-fit:cover;border-radius:18px;display:block;background:#1a0b2e" loading="lazy">
+    </div>
+  </div>
+</div>
+
+<div id="heatpump" style="background:#f4eefb;padding:96px 40px;scroll-margin-top:0px">
+  <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center;direction:rtl">
+    <div style="direction:ltr">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+        <span style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#c96a12">HOT WATER</span>
+        <span style="height:1px;width:48px;background:rgba(201,106,18,.45)"></span>
+      </div>
+      <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:38px;font-weight:700;line-height:1.15;margin:0 0 16px;color:#2b1550;text-wrap:pretty">Heat pumps run 3× more efficient than gas.</h2>
+      <p style="font-size:17px;line-height:1.65;color:#554a68;margin:0 0 28px;max-width:52ch">A heat pump hot water system uses electricity to move heat from the outside air — running mostly on your solar during the day, then coasting on stored heat overnight.</p>
+      <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px">
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size:15.5px;line-height:1.5;color:#443a55">Emerald Energy 320L — Australia's #1 heat pump for solar households</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size:15.5px;line-height:1.5;color:#443a55">Eligible for STC rebate (typically 4-5 STCs)</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size:15.5px;line-height:1.5;color:#443a55">Kill your gas bill and simplify your energy setup</span></div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:center">
+        <a href="#quote" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#1a0b2e;background:#f5a04a;padding:14px 26px;border-radius:999px;display:inline-block">Get a quote</a>
+        <a href="#top" style="font-size:14px;color:#7c3aed;padding:14px 6px">Back to top ↑</a>
+      </div>
+    </div>
+    <div style="direction:ltr;position:relative">
+      <div style="position:absolute;inset:-24px;background:radial-gradient(closest-side,rgba(139,92,246,.1),transparent);pointer-events:none"></div>
+      <img src="img/section-hotwater.png" alt="Heat pumps run 3× more efficient than gas." style="width:100%;height:420px;object-fit:cover;border-radius:18px;display:block;background:#1a0b2e" loading="lazy">
+    </div>
+  </div>
+</div>
+
+<div id="commercial" style="background:#faf7f2;padding:96px 40px;scroll-margin-top:0px">
+  <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center;direction:ltr">
+    <div style="direction:ltr">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+        <span style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#c96a12">COMMERCIAL & OFF-GRID · POWERED BY EARTHED'S HV BACKBONE</span>
+        <span style="height:1px;width:48px;background:rgba(201,106,18,.45)"></span>
+      </div>
+      <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:38px;font-weight:700;line-height:1.15;margin:0 0 16px;color:#2b1550;text-wrap:pretty">We take on projects most residential installers can't.</h2>
+      <p style="font-size:17px;line-height:1.65;color:#554a68;margin:0 0 28px;max-width:52ch">Because Earthed's high voltage crew handles substation-grade work daily, we're built for commercial energy projects most solar companies outsource. Warehouses, wineries, remote homesteads, ag pumping stations, community batteries — turnkey from feasibility through commissioning.</p>
+      <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px">
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size:15.5px;line-height:1.5;color:#443a55">SAPN application, connection agreement, and switching coordination — accreditations most solar companies outsource</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size:15.5px;line-height:1.5;color:#443a55">STC and LGC rebate calculation, lodgement, and reconciliation</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size:15.5px;line-height:1.5;color:#443a55">Full system product warranty stack — panels (25yr), inverter (10yr), battery (10yr), workmanship (10yr)</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size:15.5px;line-height:1.5;color:#443a55">Ongoing operations and maintenance schedule with pre-agreed response times</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size:15.5px;line-height:1.5;color:#443a55">Off-grid genset backup design (LPG or diesel) for remote sites</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size:15.5px;line-height:1.5;color:#443a55">Single point of contact — one project manager, no handoff chaos</span></div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:center">
+        <a href="#quote" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#1a0b2e;background:#f5a04a;padding:14px 26px;border-radius:999px;display:inline-block">Get a quote</a>
+        <a href="#top" style="font-size:14px;color:#7c3aed;padding:14px 6px">Back to top ↑</a>
+      </div>
+    </div>
+    <div style="direction:ltr;position:relative">
+      <div style="position:absolute;inset:-24px;background:radial-gradient(closest-side,rgba(139,92,246,.1),transparent);pointer-events:none"></div>
+      <img src="img/section-commercial-goodwe.png" alt="We take on projects most residential installers can't." style="width:100%;height:420px;object-fit:cover;border-radius:18px;display:block;background:#1a0b2e" loading="lazy">
+    </div>
+  </div>
+</div>
+
+<div id="solarcare" style="background:#f4eefb;padding:96px 40px;scroll-margin-top:0px">
+  <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center;direction:rtl">
+    <div style="direction:ltr">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+        <span style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#c96a12">SOLARCARE+</span>
+        <span style="height:1px;width:48px;background:rgba(201,106,18,.45)"></span>
+      </div>
+      <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:38px;font-weight:700;line-height:1.15;margin:0 0 16px;color:#2b1550;text-wrap:pretty">Your system, looked after for life.</h2>
+      <p style="font-size:17px;line-height:1.65;color:#554a68;margin:0 0 28px;max-width:52ch">Solar isn't fit-and-forget — panels get dirty, inverters need firmware updates, batteries need health checks. SolarCare+ keeps your system running at 100% forever.</p>
+      <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px">
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size:15.5px;line-height:1.5;color:#443a55">Annual panel wash + electrical safety check</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size:15.5px;line-height:1.5;color:#443a55">Inverter firmware updates + performance report</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size:15.5px;line-height:1.5;color:#443a55">Priority callout — 48hr response window</span></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:22px;height:22px;border-radius:50%;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.35);display:grid;place-items:center;margin-top:1px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span style="font-size:15.5px;line-height:1.5;color:#443a55">Included: gutter check + bird-proofing inspection</span></div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:center">
+        <a href="#quote" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#1a0b2e;background:#f5a04a;padding:14px 26px;border-radius:999px;display:inline-block">Get a quote</a>
+        <a href="#top" style="font-size:14px;color:#7c3aed;padding:14px 6px">Back to top ↑</a>
+      </div>
+    </div>
+    <div style="direction:ltr;position:relative">
+      <div style="position:absolute;inset:-24px;background:radial-gradient(closest-side,rgba(139,92,246,.1),transparent);pointer-events:none"></div>
+      <img src="img/section-solarcare.png" alt="Your system, looked after for life." style="width:100%;height:420px;object-fit:cover;border-radius:18px;display:block;background:#1a0b2e" loading="lazy">
+    </div>
+  </div>
+</div>
         </div>
         <div style="display:flex;gap:14px;align-items:center">
           <a href="#quote" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#1a0b2e;background:#f5a04a;padding:14px 26px;border-radius:999px;display:inline-block" style-hover="background:#ffb968">Get a quote</a>
