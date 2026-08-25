@@ -183,34 +183,111 @@ a:hover{color:#e2d3ff}
   <div style="max-width:860px;margin:0 auto">
     <div style="text-align:center;margin-bottom:44px">
       <div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#c96a12;margin-bottom:14px">Complimentary · No obligation</div>
-      <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:38px;font-weight:700;line-height:1.12;margin:0 0 16px;color:#2b1550;white-space:nowrap">Book your free home energy audit.</h2>
+      <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:38px;font-weight:700;line-height:1.12;margin:0 0 16px;color:#2b1550">Book your free home energy audit.</h2>
       <p style="font-size:17px;line-height:1.6;color:#554a68;margin:0">One of us, not a salesperson, sits with you, reviews your bills and your roof, and gives you the honest answer on what your home actually needs.</p>
     </div>
     <div style="background:#ffffff;border-radius:20px;padding:40px;box-shadow:0 14px 40px rgba(43,21,80,.1);border:1px solid rgba(43,21,80,.07)">
-      <div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#7c3aed;margin-bottom:16px">What are you looking for?</div>
-      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px">
-        <sc-for list="{{ interests }}" as="i" hint-placeholder-count="5">
-          <button onClick="{{ i.pick }}" style="font-family:Arial,Helvetica,sans-serif;font-size:14.5px;font-weight:600;padding:11px 20px;border-radius:999px;border:1px solid {{ i.border }};background:{{ i.bg }};color:{{ i.color }};cursor:pointer">{{ i.label }}</button>
-        </sc-for>
+      <form id="ee-quote-form" action="https://formspree.io/f/xlgybzag" method="POST" novalidate>
+        <div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#7c3aed;margin-bottom:16px">What are you looking for?</div>
+        <div id="ee-pills" style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px">
+          <button type="button" data-value="Solar" class="ee-pill" style="font-family:Arial,Helvetica,sans-serif;font-size:14.5px;font-weight:600;padding:11px 20px;border-radius:999px;border:1px solid rgba(43,21,80,.18);background:#faf7f2;color:#2b1550;cursor:pointer;transition:all .15s">Solar</button>
+          <button type="button" data-value="Battery" class="ee-pill" style="font-family:Arial,Helvetica,sans-serif;font-size:14.5px;font-weight:600;padding:11px 20px;border-radius:999px;border:1px solid rgba(43,21,80,.18);background:#faf7f2;color:#2b1550;cursor:pointer;transition:all .15s">Battery</button>
+          <button type="button" data-value="Solar + Battery" class="ee-pill" style="font-family:Arial,Helvetica,sans-serif;font-size:14.5px;font-weight:600;padding:11px 20px;border-radius:999px;border:1px solid rgba(43,21,80,.18);background:#faf7f2;color:#2b1550;cursor:pointer;transition:all .15s">Solar + Battery</button>
+          <button type="button" data-value="EV Charger" class="ee-pill" style="font-family:Arial,Helvetica,sans-serif;font-size:14.5px;font-weight:600;padding:11px 20px;border-radius:999px;border:1px solid rgba(43,21,80,.18);background:#faf7f2;color:#2b1550;cursor:pointer;transition:all .15s">EV Charger</button>
+          <button type="button" data-value="Energy Audit Only" class="ee-pill" style="font-family:Arial,Helvetica,sans-serif;font-size:14.5px;font-weight:600;padding:11px 20px;border-radius:999px;border:1px solid rgba(43,21,80,.18);background:#faf7f2;color:#2b1550;cursor:pointer;transition:all .15s">Energy Audit Only</button>
+        </div>
+        <input type="hidden" name="interest" id="ee-interest" value="">
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px 20px;margin-bottom:18px">
+          <div><label for="ee-name" style="display:block;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#554a68;margin-bottom:8px">Name</label><input id="ee-name" name="name" type="text" required style="width:100%;box-sizing:border-box;padding:13px 14px;border:1px solid rgba(43,21,80,.18);border-radius:10px;font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#2b1550;background:#fbf9f6"></div>
+          <div><label for="ee-phone" style="display:block;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#554a68;margin-bottom:8px">Phone</label><input id="ee-phone" name="phone" type="tel" required placeholder="04XX XXX XXX" style="width:100%;box-sizing:border-box;padding:13px 14px;border:1px solid rgba(43,21,80,.18);border-radius:10px;font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#2b1550;background:#fbf9f6"></div>
+          <div><label for="ee-email" style="display:block;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#554a68;margin-bottom:8px">Email</label><input id="ee-email" name="email" type="email" required style="width:100%;box-sizing:border-box;padding:13px 14px;border:1px solid rgba(43,21,80,.18);border-radius:10px;font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#2b1550;background:#fbf9f6"></div>
+          <div><label for="ee-suburb" style="display:block;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#554a68;margin-bottom:8px">Suburb</label><input id="ee-suburb" name="suburb" type="text" required placeholder="e.g. Wattle Park" style="width:100%;box-sizing:border-box;padding:13px 14px;border:1px solid rgba(43,21,80,.18);border-radius:10px;font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#2b1550;background:#fbf9f6"></div>
+        </div>
+        <div style="margin-bottom:18px"><label for="ee-bill" style="display:block;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#554a68;margin-bottom:8px">Average quarterly bill</label><input id="ee-bill" name="quarterly_bill" type="text" placeholder="e.g. $850 / quarter" style="width:100%;box-sizing:border-box;padding:13px 14px;border:1px solid rgba(43,21,80,.18);border-radius:10px;font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#2b1550;background:#fbf9f6"></div>
+        <div style="margin-bottom:28px"><label for="ee-notes" style="display:block;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#554a68;margin-bottom:8px">Anything we should know? (optional)</label><textarea id="ee-notes" name="notes" rows="3" placeholder="Roof type, EV plans, off-peak schedule, anything that helps us prep." style="width:100%;box-sizing:border-box;padding:13px 14px;border:1px solid rgba(43,21,80,.18);border-radius:10px;font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#2b1550;background:#fbf9f6;resize:vertical"></textarea></div>
+        <input type="text" name="_gotcha" style="display:none">
+        <div id="ee-error" style="display:none;text-align:center;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#a02929;background:rgba(160,41,41,.08);border:1px solid rgba(160,41,41,.25);padding:12px;border-radius:10px;margin-bottom:16px"></div>
+        <button id="ee-submit" type="submit" style="width:100%;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#1a0b2e;background:#f5a04a;padding:17px 32px;border-radius:999px;border:none;cursor:pointer;transition:background .15s">Send my enquiry</button>
+      </form>
+      <div id="ee-success" style="display:none;text-align:center;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:600;color:#2b7a3f;background:rgba(43,122,63,.1);border:1px solid rgba(43,122,63,.3);padding:24px;border-radius:12px">
+        <div style="font-size:22px;margin-bottom:8px">Thanks — we've got it.</div>
+        <div style="font-size:14px;font-weight:400;color:#2b7a3f">One of us will be in touch within one business day.</div>
       </div>
-      <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px 20px;margin-bottom:18px">
-        <div><div style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#554a68;margin-bottom:8px">Name</div><input type="text" style="width:100%;box-sizing:border-box;padding:13px 14px;border:1px solid rgba(43,21,80,.18);border-radius:10px;font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#2b1550;background:#fbf9f6"></div>
-        <div><div style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#554a68;margin-bottom:8px">Phone</div><input type="tel" placeholder="04XX XXX XXX" style="width:100%;box-sizing:border-box;padding:13px 14px;border:1px solid rgba(43,21,80,.18);border-radius:10px;font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#2b1550;background:#fbf9f6"></div>
-        <div><div style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#554a68;margin-bottom:8px">Email</div><input type="email" style="width:100%;box-sizing:border-box;padding:13px 14px;border:1px solid rgba(43,21,80,.18);border-radius:10px;font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#2b1550;background:#fbf9f6"></div>
-        <div><div style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#554a68;margin-bottom:8px">Suburb</div><input type="text" placeholder="e.g. Wattle Park" style="width:100%;box-sizing:border-box;padding:13px 14px;border:1px solid rgba(43,21,80,.18);border-radius:10px;font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#2b1550;background:#fbf9f6"></div>
-      </div>
-      <div style="margin-bottom:18px"><div style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#554a68;margin-bottom:8px">Average quarterly bill</div><input type="text" placeholder="e.g. $850 / quarter" style="width:100%;box-sizing:border-box;padding:13px 14px;border:1px solid rgba(43,21,80,.18);border-radius:10px;font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#2b1550;background:#fbf9f6"></div>
-      <div style="margin-bottom:28px"><div style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#554a68;margin-bottom:8px">Anything we should know? (optional)</div><textarea rows="3" placeholder="Roof type, EV plans, off-peak schedule, anything that helps us prep." style="width:100%;box-sizing:border-box;padding:13px 14px;border:1px solid rgba(43,21,80,.18);border-radius:10px;font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#2b1550;background:#fbf9f6;resize:vertical"></textarea></div>
-      <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
-        <button onClick="{{ send }}" style="width:100%;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#1a0b2e;background:#f5a04a;padding:17px 32px;border-radius:999px;border:none;cursor:pointer" style-hover="background:#ffb968">Send my enquiry</button>
-      </sc-if>
-      <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
-        <div style="text-align:center;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:600;color:#2b7a3f;background:rgba(43,122,63,.1);border:1px solid rgba(43,122,63,.3);padding:16px;border-radius:12px">Thanks — we'll be in touch within one business day.</div>
-      </sc-if>
       <p style="text-align:center;font-size:13.5px;line-height:1.5;color:#8a7f9c;margin:18px 0 0">We reply within one business day. Your details stay with Earthed. Never shared.</p>
     </div>
   </div>
 </div>
+
+<script>
+(function(){
+  var pills = document.querySelectorAll('.ee-pill');
+  var interest = document.getElementById('ee-interest');
+  pills.forEach(function(p){
+    p.addEventListener('click', function(){
+      pills.forEach(function(x){
+        x.style.background = '#faf7f2';
+        x.style.color = '#2b1550';
+        x.style.border = '1px solid rgba(43,21,80,.18)';
+      });
+      p.style.background = '#7c3aed';
+      p.style.color = '#ffffff';
+      p.style.border = '1px solid #7c3aed';
+      interest.value = p.getAttribute('data-value');
+    });
+  });
+
+  var form = document.getElementById('ee-quote-form');
+  var success = document.getElementById('ee-success');
+  var errorBox = document.getElementById('ee-error');
+  var submit = document.getElementById('ee-submit');
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    errorBox.style.display = 'none';
+
+    if (!interest.value){
+      errorBox.textContent = 'Please pick what you’re looking for above.';
+      errorBox.style.display = 'block';
+      return;
+    }
+    var required = ['ee-name','ee-phone','ee-email','ee-suburb'];
+    for (var i=0; i<required.length; i++){
+      var f = document.getElementById(required[i]);
+      if (!f.value.trim()){
+        errorBox.textContent = 'Please fill in all required fields.';
+        errorBox.style.display = 'block';
+        f.focus();
+        return;
+      }
+    }
+
+    submit.textContent = 'Sending...';
+    submit.disabled = true;
+    submit.style.opacity = '0.7';
+
+    var data = new FormData(form);
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(function(res){
+      if (res.ok){
+        form.style.display = 'none';
+        success.style.display = 'block';
+        success.scrollIntoView({behavior:'smooth', block:'center'});
+      } else {
+        return res.json().then(function(d){ throw new Error(d.error || 'Send failed'); });
+      }
+    }).catch(function(err){
+      errorBox.textContent = 'Something went wrong. Please call 0400 254 124 or email support@earthedenergy.au.';
+      errorBox.style.display = 'block';
+      submit.textContent = 'Send my enquiry';
+      submit.disabled = false;
+      submit.style.opacity = '1';
+    });
+  });
+})();
+</script>
 
 <div style="background:#0a0413;padding:72px 40px 0">
   <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:64px;padding-bottom:56px;border-bottom:1px solid rgba(196,165,255,.14)">
