@@ -2,6 +2,26 @@
 <html>
 <head>
 <title>Earthed Energy · Solar, Battery, EV, Aircon &amp; Hot Water · Norwood SA</title>
+<style>
+/* Futuristic gritty section backgrounds — v222 */
+@keyframes grainshift{0%{transform:translate(0,0)}100%{transform:translate(-3px,-4px)}}
+.gritty{position:relative;overflow:hidden}
+.gritty::before{content:'';position:absolute;inset:-20px;pointer-events:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='320'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/></svg>");opacity:.06;mix-blend-mode:multiply;z-index:0}
+.gritty > *{position:relative;z-index:1}
+#solar{background:radial-gradient(ellipse at 100% 0%,rgba(245,160,74,.08),transparent 55%),radial-gradient(ellipse at 0% 100%,rgba(124,58,237,.05),transparent 55%),linear-gradient(180deg,#fbf7f0 0%,#f4ecdf 100%)!important}
+#battery{background:radial-gradient(ellipse at 0% 0%,rgba(124,58,237,.10),transparent 60%),radial-gradient(ellipse at 100% 100%,rgba(196,165,255,.08),transparent 55%),linear-gradient(180deg,#f4eefb 0%,#ebe0f5 100%)!important}
+#solar-battery{background:radial-gradient(ellipse at 50% 0%,rgba(245,160,74,.06),transparent 55%),linear-gradient(180deg,#faf7f2 0%,#efe6d7 100%),radial-gradient(circle at 20% 80%,rgba(124,58,237,.04),transparent 40%)!important}
+#ev{background:radial-gradient(ellipse at 100% 0%,rgba(124,58,237,.12),transparent 60%),radial-gradient(ellipse at 0% 100%,rgba(255,154,162,.05),transparent 50%),linear-gradient(180deg,#f4eefb 0%,#e5d8ee 100%)!important}
+#aircon{background:radial-gradient(ellipse at 50% 100%,rgba(147,197,253,.06),transparent 55%),radial-gradient(ellipse at 100% 0%,rgba(245,160,74,.06),transparent 55%),linear-gradient(180deg,#f5f0e5 0%,#ebe4d3 100%)!important}
+#heatpump{background:radial-gradient(ellipse at 0% 50%,rgba(255,154,162,.08),transparent 55%),radial-gradient(ellipse at 100% 100%,rgba(124,58,237,.08),transparent 55%),linear-gradient(180deg,#f4eefb 0%,#e6d9f0 100%)!important}
+#commercial{background:radial-gradient(ellipse at 100% 100%,rgba(43,21,80,.14),transparent 55%),radial-gradient(ellipse at 0% 0%,rgba(245,160,74,.07),transparent 50%),linear-gradient(180deg,#f7f0e3 0%,#ece0c7 100%)!important;border-top:1px solid rgba(43,21,80,.08);border-bottom:1px solid rgba(43,21,80,.08)}
+#solarcare{background:radial-gradient(ellipse at 50% 50%,rgba(125,211,164,.06),transparent 55%),radial-gradient(ellipse at 100% 0%,rgba(196,165,255,.09),transparent 55%),linear-gradient(180deg,#f4eefb 0%,#e2d3ed 100%)!important}
+#gallery{background:radial-gradient(ellipse at 0% 0%,rgba(245,160,74,.06),transparent 55%),linear-gradient(180deg,#faf7f2 0%,#f0e8d8 100%)!important}
+#finance{background:radial-gradient(ellipse at 100% 0%,rgba(124,58,237,.10),transparent 55%),linear-gradient(180deg,#f4eefb 0%,#e8daf2 100%)!important}
+#approach{background:radial-gradient(ellipse at 0% 100%,rgba(196,165,255,.10),transparent 55%),linear-gradient(180deg,#faf7f2 0%,#efe4d0 100%)!important}
+#quote{background:radial-gradient(ellipse at 50% 0%,rgba(124,58,237,.14),transparent 60%),linear-gradient(180deg,#f4eefb 0%,#e0cff0 100%)!important}
+</style>
+
 <meta name="description" content="Boutique renewable home studio in Norwood, South Australia. Solar, battery storage, EV charging, air conditioning and heat pump hot water, designed and installed as one system.">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -62,7 +82,7 @@ a:hover{color:#e2d3ff}
 </div>
 
 <!-- ================= PRODUCT SECTIONS ================= -->
-<div id="solar" style="background:#faf7f2;padding:96px 40px;scroll-margin-top:0px">
+<div id="solar" class="gritty" style="background:#faf7f2;padding:96px 40px;scroll-margin-top:0px">
   <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center;direction:ltr">
     <div style="direction:ltr">
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
@@ -88,7 +108,7 @@ a:hover{color:#e2d3ff}
   </div>
 </div>
 
-<div id="battery" style="background:#f4eefb;padding:96px 40px;scroll-margin-top:0px">
+<div id="battery" class="gritty" style="background:#f4eefb;padding:96px 40px;scroll-margin-top:0px">
   <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center;direction:rtl">
     <div style="direction:ltr">
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
@@ -109,12 +129,12 @@ a:hover{color:#e2d3ff}
     </div>
     <div style="direction:ltr;position:relative">
       <div style="position:absolute;inset:-24px;background:radial-gradient(closest-side,rgba(139,92,246,.1),transparent);pointer-events:none"></div>
-      <img src="img/section-battery.png" alt="Store your sunshine. Use it after dark." style="width:100%;height:auto;aspect-ratio:4/5;max-height:560px;object-fit:contain;border-radius:18px;display:block;background:#150929;padding:16px;box-sizing:border-box" loading="lazy">
+      <img src="img/section-solarbattery.png" alt="Store your sunshine. Use it after dark." style="width:100%;height:auto;aspect-ratio:4/5;max-height:560px;object-fit:contain;border-radius:18px;display:block;background:#150929;padding:16px;box-sizing:border-box" loading="lazy">
     </div>
   </div>
 </div>
 
-<div id="solar-battery" style="background:#faf7f2;padding:96px 40px;scroll-margin-top:0px">
+<div id="solar-battery" class="gritty" style="background:#faf7f2;padding:96px 40px;scroll-margin-top:0px">
   <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center;direction:ltr">
     <div style="direction:ltr">
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
@@ -135,12 +155,12 @@ a:hover{color:#e2d3ff}
     </div>
     <div style="direction:ltr;position:relative">
       <div style="position:absolute;inset:-24px;background:radial-gradient(closest-side,rgba(139,92,246,.1),transparent);pointer-events:none"></div>
-      <img src="img/section-solarbattery.png" alt="Solar and battery, delivered together." style="width:100%;height:auto;aspect-ratio:4/5;max-height:560px;object-fit:contain;border-radius:18px;display:block;background:#150929;padding:16px;box-sizing:border-box" loading="lazy">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;background:#150929;border-radius:18px;padding:16px;box-sizing:border-box"><img src="img/section-solar.png" alt="Solar panels" style="width:100%;height:auto;aspect-ratio:3/5;object-fit:contain;border-radius:10px;display:block" loading="lazy"><img src="img/section-solarbattery.png" alt="Battery unit" style="width:100%;height:auto;aspect-ratio:3/5;object-fit:contain;border-radius:10px;display:block" loading="lazy"></div>
     </div>
   </div>
 </div>
 
-<div id="ev" style="background:#f4eefb;padding:96px 40px;scroll-margin-top:0px">
+<div id="ev" class="gritty" style="background:#f4eefb;padding:96px 40px;scroll-margin-top:0px">
   <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center;direction:rtl">
     <div style="direction:ltr">
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
@@ -166,7 +186,7 @@ a:hover{color:#e2d3ff}
   </div>
 </div>
 
-<div id="aircon" style="background:#faf7f2;padding:96px 40px;scroll-margin-top:0px">
+<div id="aircon" class="gritty" style="background:#faf7f2;padding:96px 40px;scroll-margin-top:0px">
   <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center;direction:ltr">
     <div style="direction:ltr">
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
@@ -187,12 +207,12 @@ a:hover{color:#e2d3ff}
     </div>
     <div style="direction:ltr;position:relative">
       <div style="position:absolute;inset:-24px;background:radial-gradient(closest-side,rgba(139,92,246,.1),transparent);pointer-events:none"></div>
-      <img src="img/section-aircon.png" alt="Cool the rooms you use. Skip the ones you don't." style="width:100%;height:auto;aspect-ratio:4/5;max-height:560px;object-fit:contain;border-radius:18px;display:block;background:#150929;padding:16px;box-sizing:border-box" loading="lazy">
+      <img src="img/section-battery.png" alt="Cool the rooms you use. Skip the ones you don't." style="width:100%;height:auto;aspect-ratio:4/5;max-height:560px;object-fit:contain;border-radius:18px;display:block;background:#150929;padding:16px;box-sizing:border-box" loading="lazy">
     </div>
   </div>
 </div>
 
-<div id="heatpump" style="background:#f4eefb;padding:96px 40px;scroll-margin-top:0px">
+<div id="heatpump" class="gritty" style="background:#f4eefb;padding:96px 40px;scroll-margin-top:0px">
   <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center;direction:rtl">
     <div style="direction:ltr">
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
@@ -218,7 +238,7 @@ a:hover{color:#e2d3ff}
   </div>
 </div>
 
-<div id="commercial" style="background:#faf7f2;padding:96px 40px;scroll-margin-top:0px">
+<div id="commercial" class="gritty" style="background:#faf7f2;padding:96px 40px;scroll-margin-top:0px">
   <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center;direction:ltr">
     <div style="direction:ltr">
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
@@ -242,12 +262,12 @@ a:hover{color:#e2d3ff}
     </div>
     <div style="direction:ltr;position:relative">
       <div style="position:absolute;inset:-24px;background:radial-gradient(closest-side,rgba(139,92,246,.1),transparent);pointer-events:none"></div>
-      <img src="img/section-commercial-goodwe.png" alt="We take on projects most residential installers can't." style="width:100%;height:auto;aspect-ratio:4/5;max-height:560px;object-fit:contain;border-radius:18px;display:block;background:#150929;padding:16px;box-sizing:border-box" loading="lazy">
+      <img src="img/section-aircon.png" alt="We take on projects most residential installers can't." style="width:100%;height:auto;aspect-ratio:4/5;max-height:560px;object-fit:contain;border-radius:18px;display:block;background:#150929;padding:16px;box-sizing:border-box" loading="lazy">
     </div>
   </div>
 </div>
 
-<div id="solarcare" style="background:#f4eefb;padding:96px 40px;scroll-margin-top:0px">
+<div id="solarcare" class="gritty" style="background:#f4eefb;padding:96px 40px;scroll-margin-top:0px">
   <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center;direction:rtl">
     <div style="direction:ltr">
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
@@ -288,7 +308,7 @@ a:hover{color:#e2d3ff}
 </sc-for>
 
 <!-- ================= GALLERY ================= -->
-<div id="gallery" style="background:#faf7f2;padding:96px 40px 104px">
+<div id="gallery" class="gritty" style="background:#faf7f2;padding:96px 40px 104px">
   <div style="max-width:1180px;margin:0 auto">
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
       <span style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#c96a12">Recent installs</span>
@@ -306,7 +326,7 @@ a:hover{color:#e2d3ff}
 </div>
 
 <!-- ================= QUOTE / FOOTER ================= -->
-<div id="finance" style="background:#f4eefb;padding:96px 40px 104px">
+<div id="finance" class="gritty" style="background:#f4eefb;padding:96px 40px 104px">
   <div style="max-width:1180px;margin:0 auto">
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
       <span style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#c96a12">Finance</span>
@@ -334,7 +354,7 @@ a:hover{color:#e2d3ff}
   </div>
 </div>
 
-<div id="approach" style="background:#faf7f2;padding:96px 40px 104px">
+<div id="approach" class="gritty" style="background:#faf7f2;padding:96px 40px 104px">
   <div style="max-width:1180px;margin:0 auto">
     <div style="text-align:center;max-width:640px;margin:0 auto 44px">
       <div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#c96a12;margin-bottom:14px">Our approach</div>
@@ -371,7 +391,7 @@ a:hover{color:#e2d3ff}
   </div>
 </div>
 
-<div id="quote" style="background:#f4eefb;padding:100px 40px 110px">
+<div id="quote" class="gritty" style="background:#f4eefb;padding:100px 40px 110px">
   <div style="max-width:860px;margin:0 auto">
     <div style="text-align:center;margin-bottom:44px">
       <div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#c96a12;margin-bottom:14px">Complimentary · No obligation</div>
