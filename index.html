@@ -57,15 +57,6 @@ a:hover{color:#e2d3ff}
     <a href="#quote" style="font-family:Arial,Helvetica,sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;color:#1a0b2e;background:#f5a04a;padding:9px 18px;border-radius:999px;margin-left:8px" style-hover="background:#ffb968;color:#120722">Get a quote</a>
   </div>
 
-  <!-- hotspots -->
-  <sc-for list="{{ hotspots }}" as="h" hint-placeholder-count="4">
-    <a href="{{ h.href }}" aria-label="{{ h.label }}" style="position:absolute;left:{{ h.left }};top:{{ h.top }};width:{{ h.w }};height:{{ h.h }};border-radius:14px;border:2px solid rgba(196,165,255,0);z-index:4;display:block" style-hover="border:2px solid rgba(196,165,255,.85);background:rgba(124,58,237,.14);box-shadow:0 0 40px rgba(139,92,246,.45), inset 0 0 30px rgba(139,92,246,.18)">
-      <sc-if value="{{ showHints }}" hint-placeholder-val="{{ true }}">
-        <span style="position:absolute;left:50%;top:50%;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:#c4a5ff;border:2px solid #ffffff;animation:pulse 2.4s ease-out infinite;pointer-events:none;opacity:0;transition:opacity .2s" class="hs-dot"></span>
-      </sc-if>
-      <span style="position:absolute;left:50%;bottom:-14px;transform:translateX(-50%);font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#ffffff;background:rgba(26,11,46,.9);border:1px solid rgba(196,165,255,.5);padding:7px 16px;border-radius:999px;white-space:nowrap;opacity:0;transition:opacity .18s;pointer-events:none" class="hs-label">{{ h.label }}</span>
-    </a>
-  </sc-for>
 
   <!-- hero copy -->
   <div style="position:absolute;left:0;right:0;bottom:0;padding:0 40px 36px;display:flex;justify-content:space-between;align-items:flex-end;background:linear-gradient(0deg,rgba(13,6,24,.72),rgba(13,6,24,0));z-index:3;pointer-events:none">
@@ -74,10 +65,7 @@ a:hover{color:#e2d3ff}
       <h1 style="font-family:Arial,Helvetica,sans-serif;font-size:44px;line-height:1.1;font-weight:700;margin:0 0 10px;color:#ffffff;text-wrap:pretty">Your whole home, powered by the sun.</h1>
       <p style="font-size:17px;line-height:1.55;color:rgba(239,234,247,.85);margin:0">An Adelaide Hills family energy business bringing utility-scale renewable infrastructure discipline to your home&#39;s solar, battery, EV charging, aircon and hot water. One team. One warranty. One phone number. Local design, install and service.</p>
     </div>
-    <div style="display:flex;flex-direction:column;align-items:center;gap:6px;color:rgba(239,234,247,.7);font-size:12px;letter-spacing:.14em;text-transform:uppercase;animation:bob 2.6s ease-in-out infinite">
-      <span>Hover a product</span>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14m0 0l-6-6m6 6l6-6" stroke="#c4a5ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-    </div>
+    
   </div>
 </div>
 
@@ -345,9 +333,9 @@ a:hover{color:#e2d3ff}
         <div style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:.07em;color:#7c3aed">0% ON $2k–$10k · UP TO $50k EXTENDED</div>
       </div>
       <div style="background:#ffffff;border:2px solid rgba(43,21,80,.1);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:10px" style-hover="border:2px solid #7c3aed">
-        <div style="font-family:Arial,Helvetica,sans-serif;font-size:21px;font-weight:700;line-height:1.2;color:#2b1550">PPA</div>
-        <p style="font-size:14.5px;line-height:1.55;color:#554a68;margin:0;flex:1">Solar and battery installed with nothing out-of-pocket.</p>
-        <div style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:.07em;color:#7c3aed">$0 UPFRONT · DETAILS ON ENQUIRY</div>
+        <div style="font-family:Arial,Helvetica,sans-serif;font-size:21px;font-weight:700;line-height:1.2;color:#2b1550">28Watt</div>
+        <p style="font-size:14.5px;line-height:1.55;color:#554a68;margin:0;flex:1">Solar + battery specialist. Interest-free with fast approval.</p>
+        <div style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:.07em;color:#7c3aed">INTEREST-FREE · SOLAR + BATTERY SPECIALIST</div>
       </div>
     </div>
     <p style="font-size:15px;line-height:1.6;color:#554a68;margin:26px 0 0">Not sure which fits? Answer the walkthrough and we'll match you.</p>
@@ -358,34 +346,44 @@ a:hover{color:#e2d3ff}
   <div style="max-width:1180px;margin:0 auto">
     <div style="text-align:center;max-width:640px;margin:0 auto 44px">
       <div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#c96a12;margin-bottom:14px">Our approach</div>
-      <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:38px;font-weight:700;line-height:1.15;margin:0 0 14px;color:#2b1550;text-wrap:pretty">Five calm steps. No hard sell.</h2>
+      <h2 style="font-family:Arial,Helvetica,sans-serif;font-size:38px;font-weight:700;line-height:1.15;margin:0 0 14px;color:#2b1550;text-wrap:pretty">Seven honest steps. No hard sell.</h2>
       <p style="font-size:17px;line-height:1.6;color:#554a68;margin:0">You would not let a stranger build your roof. We do not think you should let one build your energy system either.</p>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;align-items:start">
       <div style="background:#ffffff;border:1px solid rgba(43,21,80,.08);border-radius:16px;padding:26px 24px 28px;display:flex;flex-direction:column;gap:12px">
         <div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;color:#7c3aed">01 · Listen</div>
-        <div style="font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:700;line-height:1.25;color:#2b1550">Free energy audit</div>
-        <p style="font-size:14.5px;line-height:1.6;color:#554a68;margin:0">We sit down with your bill, your usage and your plans. No pressure, just an honest read on what your home actually needs.</p>
+        <div style="font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:700;line-height:1.25;color:#2b1550">What you want, not what we sell</div>
+        <p style="font-size:14.5px;line-height:1.6;color:#554a68;margin:0">We start with what matters to your home. No sales pitch. Not the right fit for us? We say so.</p>
       </div>
       <div style="background:#ffffff;border:1px solid rgba(43,21,80,.08);border-radius:16px;padding:26px 24px 28px;display:flex;flex-direction:column;gap:12px">
-        <div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;color:#7c3aed">02 · Design</div>
-        <div style="font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:700;line-height:1.25;color:#2b1550">Home assessment</div>
-        <p style="font-size:14.5px;line-height:1.6;color:#554a68;margin:0">We design the system around your roof, your budget and your finance options, and explain every step before anything is ordered.</p>
+        <div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;color:#7c3aed">02 · Study</div>
+        <div style="font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:700;line-height:1.25;color:#2b1550">Twelve months of bills</div>
+        <p style="font-size:14.5px;line-height:1.6;color:#554a68;margin:0">Send us your last 12 months of power bills. We read the real data — how much you use, when, and what you pay.</p>
       </div>
       <div style="background:#ffffff;border:1px solid rgba(43,21,80,.08);border-radius:16px;padding:26px 24px 28px;display:flex;flex-direction:column;gap:12px">
-        <div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;color:#7c3aed">03 · Approve</div>
-        <div style="font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:700;line-height:1.25;color:#2b1550">Grid and rebates</div>
-        <p style="font-size:14.5px;line-height:1.6;color:#554a68;margin:0">SAPN application, STC paperwork and rebate claims are lodged by us. You never chase a single form.</p>
+        <div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;color:#7c3aed">03 · Walk</div>
+        <div style="font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:700;line-height:1.25;color:#2b1550">Roof, switchboard, EV feed</div>
+        <p style="font-size:14.5px;line-height:1.6;color:#554a68;margin:0">A free 45-minute site visit. We walk your roof, check the meter and switchboard, and note any EV or hot water plans.</p>
       </div>
       <div style="background:#ffffff;border:1px solid rgba(43,21,80,.08);border-radius:16px;padding:26px 24px 28px;display:flex;flex-direction:column;gap:12px">
-        <div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;color:#7c3aed">04 · Install</div>
-        <div style="font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:700;line-height:1.25;color:#2b1550">Installation day</div>
-        <p style="font-size:14.5px;line-height:1.6;color:#554a68;margin:0">Caleb meets the specialist crew on site and walks the job with you. Any brief power outage is flagged well in advance.</p>
+        <div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;color:#7c3aed">04 · Solve</div>
+        <div style="font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:700;line-height:1.25;color:#2b1550">Sized to what you use</div>
+        <p style="font-size:14.5px;line-height:1.6;color:#554a68;margin:0">Our 5-step backsolve: load, generation, battery, rebate, payback. Sized to your usage — not what fits your roof.</p>
       </div>
       <div style="background:#ffffff;border:1px solid rgba(43,21,80,.08);border-radius:16px;padding:26px 24px 28px;display:flex;flex-direction:column;gap:12px">
-        <div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;color:#7c3aed">05 · Live</div>
-        <div style="font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:700;line-height:1.25;color:#2b1550">Commissioning and care</div>
-        <p style="font-size:14.5px;line-height:1.6;color:#554a68;margin:0">System tested and app paired, then full technical support stays on hand. We are one phone call away, for good.</p>
+        <div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;color:#7c3aed">05 · Quote</div>
+        <div style="font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:700;line-height:1.25;color:#2b1550">Firm price · rebate baked in · 48 hours</div>
+        <p style="font-size:14.5px;line-height:1.6;color:#554a68;margin:0">Written proposal in your inbox within 48 hours of the site visit. Firm price, current rebates applied, no hidden fees.</p>
+      </div>
+      <div style="background:#ffffff;border:1px solid rgba(43,21,80,.08);border-radius:16px;padding:26px 24px 28px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;color:#7c3aed">06 · Build</div>
+        <div style="font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:700;line-height:1.25;color:#2b1550">One install day · done properly</div>
+        <p style="font-size:14.5px;line-height:1.6;color:#554a68;margin:0">One day. Two crew. Commissioning and monitoring live before we drive off. Any power outage flagged well in advance.</p>
+      </div>
+      <div style="background:#ffffff;border:1px solid rgba(43,21,80,.08);border-radius:16px;padding:26px 24px 28px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;color:#7c3aed">07 · Back</div>
+        <div style="font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:700;line-height:1.25;color:#2b1550">12-month check-in · lifetime monitoring</div>
+        <p style="font-size:14.5px;line-height:1.6;color:#554a68;margin:0">First-year tune-up included. Lifetime access to your monitoring dashboard. Real phone number. Real person. For good.</p>
       </div>
     </div>
   </div>
@@ -496,7 +494,7 @@ a:hover{color:#e2d3ff}
         return res.json().then(function(d){ throw new Error(d.error || 'Send failed'); });
       }
     }).catch(function(err){
-      errorBox.textContent = 'Something went wrong. Please call 0400 254 124 or email support@earthedenergy.au.';
+      errorBox.textContent = 'Something went wrong. Please call 0400 254 124 or email team@earthedenergy.au.';
       errorBox.style.display = 'block';
       submit.textContent = 'Send my enquiry';
       submit.disabled = false;
@@ -515,16 +513,16 @@ a:hover{color:#e2d3ff}
     <div>
       <div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#efeaf7;margin-bottom:20px">Company</div>
       <div style="display:flex;flex-direction:column;gap:13px">
-        <a href="#top" style="font-size:14px;color:rgba(239,234,247,.6)" style-hover="color:#c4a5ff">About</a>
-        <a href="#top" style="font-size:14px;color:rgba(239,234,247,.6)" style-hover="color:#c4a5ff">Our Process</a>
+        <a href="#solar" style="font-size:14px;color:rgba(239,234,247,.6)" style-hover="color:#c4a5ff">About</a>
+        <a href="#approach" style="font-size:14px;color:rgba(239,234,247,.6)" style-hover="color:#c4a5ff">Our Process</a>
         <a href="#gallery" style="font-size:14px;color:rgba(239,234,247,.6)" style-hover="color:#c4a5ff">Recent Installs</a>
-        <a href="#top" style="font-size:14px;color:rgba(239,234,247,.6)" style-hover="color:#c4a5ff">Earthed High Voltage</a>
+        <a href="https://www.earthedhv.au" target="_blank" rel="noopener" style="font-size:14px;color:rgba(239,234,247,.6)" style-hover="color:#c4a5ff">Earthed High Voltage ↗</a>
       </div>
     </div>
     <div>
       <div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#efeaf7;margin-bottom:20px">Contact</div>
       <div style="display:flex;flex-direction:column;gap:13px">
-        <a href="mailto:support@earthedenergy.au" style="font-size:14px;color:rgba(239,234,247,.6)" style-hover="color:#c4a5ff">support@earthedenergy.au</a>
+        <a href="mailto:team@earthedenergy.au" style="font-size:14px;color:rgba(239,234,247,.6)" style-hover="color:#c4a5ff">team@earthedenergy.au</a>
         <a href="tel:0433839284" style="font-size:14px;color:rgba(239,234,247,.6)" style-hover="color:#c4a5ff">0433 839 284</a>
         <span style="font-size:14px;color:rgba(239,234,247,.6)">Adelaide Hills, South Australia</span>
         <span style="font-size:14px;color:rgba(239,234,247,.6)">ACN 691 065 460</span>
@@ -533,7 +531,6 @@ a:hover{color:#e2d3ff}
   </div>
   <div style="max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding:26px 0 30px">
     <span style="font-size:13px;color:rgba(239,234,247,.45)">© 2026 Earthed · Adelaide Hills, South Australia · ACN 691 065 460</span>
-    <span style="font-size:13px;color:rgba(239,234,247,.45)">Adelaide, South Australia</span>
   </div>
 </div>
 </x-dc>
