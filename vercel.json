@@ -1,4 +1,10 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/equipment", "destination": "/what-we-install", "permanent": false },
+    { "source": "/credentials", "destination": "/credentials-and-licences", "permanent": false },
+    { "source": "/how-we-quote", "destination": "/get-a-quote", "permanent": false },
+    { "source": "/home", "destination": "/", "permanent": false }
+  ]
 }
