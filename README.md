@@ -15,8 +15,10 @@ New site build for earthedenergy.au — staging deployment.
 3. Vercel auto-deploys from `main`
 
 ## Files
-- `index.html` — main landing page
-- `image-slot.js` — image loading logic
-- `support.js` — support/chat integration
-- `img/` — hero + gallery images
-- `vercel.json` — Vercel config
+- `index.html` — home page (Claude Design "Earthed Energy Home v5")
+- `<slug>.html` — 40 content pages, served at clean URLs (`/residential`, `/knowledge`, `/get-a-quote`, …)
+- `support.js` — Claude Design page runtime (renders the `<x-dc>` templates client-side)
+- `image-slot.js` + `.image-slots.state.json` — image slot component and saved crop/framing
+- `knowledge-index.js` — guide list used by `/knowledge`
+- `img/site/` — compressed images used by the v5-era pages
+- `vercel.json` — clean URLs + redirects for old slugs (`/equipment`, `/credentials`)
