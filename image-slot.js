@@ -292,7 +292,7 @@
     '  font:13px/1.3 system-ui,-apple-system,sans-serif;' +
     '  width:100%;height:100%;aspect-ratio:3/2}' +
     '.empty .cap,.empty .sub{opacity:.75}' +
-    '.frame{position:absolute;inset:0;overflow:hidden;background:rgba(127,127,127,.08)}' +
+    '.frame{position:absolute;inset:0;overflow:hidden}' +
     // .frame img (clipped) and .spill (unclipped ghost + handles) share the
     // same left/top/width/height in frame-%, computed by _applyView(), so the
     // inside-mask crop and the outside-mask spill stay pixel-aligned.
@@ -323,6 +323,7 @@
     ':host([data-reframe]) .frame{box-shadow:0 0 0 2px #c96442}' +
     '.empty{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;' +
     '  justify-content:center;gap:6px;text-align:center;padding:12px;box-sizing:border-box;' +
+    '  background:rgba(127,127,127,.08);' +
     '  cursor:pointer;user-select:none}' +
     '.empty svg{opacity:.45}' +
     '.empty .cap{max-width:90%;font-weight:500;letter-spacing:.01em}' +
@@ -1149,6 +1150,7 @@
         this._hidShowing = false;
         this._img.style.display = 'block';
         this._empty.style.display = 'none';
+        this._ring.style.visibility = 'hidden';
         this.setAttribute('data-filled', '');
         this._clampView();
         this._applyView();
@@ -1163,6 +1165,7 @@
         // replacement (spinner), not a first fill (blank frame).
         this._hidShowing = attrError && !!this._img.getAttribute('src');
         this._img.style.display = 'none';
+        this._ring.style.visibility = '';
         this._img.removeAttribute('src');
         this._ghost.removeAttribute('src');
         // The error tile owns the blocked-photo state; .empty stays for
